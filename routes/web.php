@@ -1,6 +1,10 @@
 <?php
 
+use App\Http\Controllers\ScientistController;
+use App\Http\Controllers\DiscoveryController;
+use App\Http\Controllers\ScienceController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Redirect;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +19,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
+
+Route::resources([
+  'sciences' => ScienceController::class,
+  'discoveries' => DiscoveryController::class,
+  'scientists' => ScientistController::class
+]);
