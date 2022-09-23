@@ -1,0 +1,39 @@
+.alert{
+  width: 100%;
+  max-width: 920px;
+  margin: 0 auto;
+  padding: .75rem 1.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-bottom-width: 5px;
+  border-bottom-style: solid;
+  border-radius: 5px;
+}
+.alertMain{
+  color: var(--main);
+  border-color: var(--main);
+  background-color: hsla(var(--mainHS),var(--mainL),.25);
+}
+.alertSec{
+  color: var(--sec);
+  border-color: var(--sec);
+  background-color: hsla(var(--secHS),var(--secL),.25);
+}
+
+.alertThird{
+  color: var(--third);
+  border-color: var(--third);
+  background-color: hsla(var(--thirdHS),var(--thirdL),.25);
+}
+
+.alertLight{
+  color: var(--light);
+  border-color: var(--light);
+  background-color: hsla(var(--lightHS),var(--lightL),.25);
+}
+
+.alertDark{
+  color: var(--dark);
+  border-color: var(--dark);
+  background-color: hsla(var(--darkHS),var(--darkL),.25);
+}

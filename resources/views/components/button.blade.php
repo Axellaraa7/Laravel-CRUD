@@ -2,13 +2,13 @@
 
 @php
 $types = [
-    'main' => 'btnMain',
-    'sec' => 'btnSec',
-    'third' => 'btnThird',
-    'light' => 'btnLight',
-    'dark' => 'btnDark',
+    'main' => 'Main',
+    'sec' => 'Sec',
+    'third' => 'Third',
+    'light' => 'Light',
+    'dark' => 'Dark',
 ];
 $btnType = $types[$type];
 @endphp
 
-<button class="btn {{ $btnType }}">{{ $slot }}</button>
+<button class="btn btn{{$btnType}}">{{ $slot }}</button>

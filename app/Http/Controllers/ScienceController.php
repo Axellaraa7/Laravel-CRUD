@@ -12,9 +12,10 @@ class ScienceController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($alert = null)
     {
-        //
+      $sciences = Science::select(['id','name','description','url'])->get();
+      return view('sciences.index', compact('sciences','alert'));
     }
 
     /**
@@ -24,7 +25,7 @@ class ScienceController extends Controller
      */
     public function create()
     {
-        //
+      return view('sciences.create');
     }
 
     /**
@@ -35,7 +36,13 @@ class ScienceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $science = new Science();
+      $science->name = 'Chemistry';
+      $science->description = 'This is a chemistry description';
+      $science->url = 'https://cdn.pixabay.com/photo/2015/04/26/13/47/chemistry-740453_1280.jpg';
+      $science->slug = 'chemistry';
+      $alert = ($science->save()) ? 'Guardado con éxito' : 'Registro no guardado';
+      return redirect()->route('sciences.index')->with('alert',$alert);
     }
 
     /**
@@ -46,7 +53,7 @@ class ScienceController extends Controller
      */
     public function show(Science $science)
     {
-        //
+      return view('sciences.show', compact('science'));
     }
 
     /**
@@ -57,7 +64,7 @@ class ScienceController extends Controller
      */
     public function edit(Science $science)
     {
-        //
+      return view('sciences.edit',compact('science'));
     }
 
     /**
@@ -69,7 +76,10 @@ class ScienceController extends Controller
      */
     public function update(Request $request, Science $science)
     {
-        //
+      $science->name = 'Chemistry 2';
+      $science->description = 'This is the Chemistry 2 updated description';
+      $alert = ($science->save()) ? 'Actualizado con éxito' : 'Registro no actualizado';
+      return redirect()->route('sciences.index',['alert' => $alert]);
     }
 
     /**
@@ -80,6 +90,7 @@ class ScienceController extends Controller
      */
     public function destroy(Science $science)
     {
-        //
+      $alert = ($science->delete()) ? 'Eliminado con éxito' : 'Registro no eliminado';
+      return redirect()->route('sciences.index',['alert' => $alert]);
     }
 }

@@ -9,21 +9,8 @@
   <link rel="stylesheet" href="{{ asset('css/index.css') }}">
   <script src="{{ asset('css/index.js') }}"></script>
 </head>
-
 <body>
-  <header>
-    @section('header')
-    @show
-  </header>
-  <main>
-    @section('main')
-    @show
-  </main>
-  <footer>
-    @section('footer')
-    @show
-  </footer>
-
+  @section('body')
+  @show
 </body>
-
 </html>

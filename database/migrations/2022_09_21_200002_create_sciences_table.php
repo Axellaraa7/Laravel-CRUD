@@ -15,7 +15,10 @@ return new class extends Migration
     {
         Schema::create('sciences', function (Blueprint $table) {
             $table->id();
-            $table->string('science_name');
+            $table->string('name');
+            $table->text('description');
+            $table->string('url');
+            $table->string('slug');
             $table->timestamps();
         });
     }

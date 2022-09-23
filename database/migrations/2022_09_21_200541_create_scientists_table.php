@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('url_signature');
             $table->string('url_scientist');
             $table->unsignedBigInteger('science_id');
+            $table->string('slug');
             $table->foreign('science_id')->references('id')->on('sciences');
             $table->timestamps();
         });

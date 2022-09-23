@@ -1,0 +1,10 @@
+header{
+  padding: 1rem 2rem;
+}
+main{
+  min-height: 80vh;
+}
+
+.showSection>figure{ flex: 1 1 500px; }
+.showSection>article{ flex: 1 1 200px; }
+.showSection>article>div:first-child{ border-bottom: 2px solid var(--third); }

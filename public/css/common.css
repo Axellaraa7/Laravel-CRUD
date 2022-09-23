@@ -7,16 +7,20 @@
 }
 
 :root{
-  --light: #ddd;
-  --dark: #233;
   --alpha: 1;
+  --lightHS: 0,0%;
+  --lightL: 85%;
+  --light: hsla(var(--lightHS),var(--lightL),var(--alpha));
+  --darkHS: 0,0%;
+  --darkL: 15%;
+  --dark: hsla(var(--darkHS),var(--darkL),var(--alpha));
   --mainHS: 298,100%;
   --mainL: 14%;
   --main: hsla(var(--mainHS),var(--mainL),var(--alpha));
   --secHS: 228,94%;
   --secL: 14%;
   --sec: hsla(var(--secHS),var(--secL),var(--alpha));
-  --thirdHS: 51,100%;
+  --thirdHS: 51,90%;
   --thirdL: 50%;
   --third: hsla(var(--thirdHS),var(--thirdL),var(--alpha));;
   --fourthHS: 196,69%;

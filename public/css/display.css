@@ -21,26 +21,30 @@
 .jiCenter{ justify-items: center; }
 .jiStretch{ justify-items: stretch; }
 
-.aiStart{ align-content: flex-start; align-content: start; }
-.aiEnd{ align-content: flex-end; align-content: end; }
-.aiCenter{ align-content: center; }
-.aiStretch{ align-content: stretch; }
-.aiAround{ align-content: space-around; }
-.aiBetween{ align-content: space-between; }
-.aiEvenly{ align-content: space-evenly; }
+.acStart{ align-content: flex-start; align-content: start; }
+.acEnd{ align-content: flex-end; align-content: end; }
+.acCenter{ align-content: center; }
+.acStretch{ align-content: stretch; }
+.acAround{ align-content: space-around; }
+.acBetween{ align-content: space-between; }
+.acEvenly{ align-content: space-evenly; }
 
-.jiStart{ align-items: start; }
-.jiEnd{ align-items: end; }
-.jiCenter{ align-items: center; }
-.jiStretch{ align-items: stretch; }
+.aiStart{ align-items: start; }
+.aiEnd{ align-items: end; }
+.aiCenter{ align-items: center; }
+.aiStretch{ align-items: stretch; }
 
 .pcCenter{ place-content: center; } 
 .piCenter{ place-items: center; }
 
-.gap0h{ gap: .5rem; }
-.gap1{ gap: 1rem; }
-.gap1h{ gap: 1.5rem; }
+.gap4{ gap: 4rem; }
+.gap3h{ gap: 3.5rem; }
+.gap3{ gap: 3rem; }
+.gap2h{ gap: 2.5rem; }
 .gap2{ gap: 2rem; }
+.gap1h{ gap: 1.5rem; }
+.gap1{ gap: 1rem; }
+.gap0h{ gap: .5rem; }
 
 .flexAuto{ flex: 1 1 auto; }
 .flex100{ flex: 1 1 100%; }

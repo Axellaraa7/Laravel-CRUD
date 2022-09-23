@@ -15,7 +15,10 @@ return new class extends Migration
     {
         Schema::create('discoveries', function (Blueprint $table) {
             $table->id();
-            $table->string('discovery_name');
+            $table->string('name');
+            $table->text('description');
+            $table->string('url');
+            $table->string('slug');
             $table->timestamps();
         });
     }

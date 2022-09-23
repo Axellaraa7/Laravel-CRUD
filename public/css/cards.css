@@ -1,0 +1,2 @@
+.card1{ max-width: 280px; border:2px solid var(--light); border-radius:5px;}
+.card1>figure{ width: 100%; border-radius: inherit inherit 0 0; }

@@ -1,0 +1,5 @@
+.container600,.container720,.container960,.container1200{ margin: 1rem auto; padding: 1rem; }
+.container600{ max-width: 600px; }
+.container720{ max-width: 720px; }
+.container960{ max-width: 960px; }
+.container1200{ max-width: 1140px; }

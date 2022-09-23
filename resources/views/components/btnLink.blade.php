@@ -1,14 +1,14 @@
-@props(['link', 'type'])
+@props(['link', 'type', 'id'])
 
 @php
 $types = [
-    'main' => 'btnMain',
-    'sec' => 'btnSec',
-    'third' => 'btnThird',
-    'light' => 'btnLight',
-    'dark' => 'btnDark',
+    'main' => 'Main',
+    'sec' => 'Sec',
+    'third' => 'Third',
+    'light' => 'Light',
+    'dark' => 'Dark',
 ];
 $btnType = $types[$type];
 @endphp
 
-<li><a href="{{ route($link) }}" class="btn {{ $btnType }}">{{ $slot }}</a></li>
+<li><a href="{{ isset($id) ? route($link,$id) : route($link) }}" class="btn btn{{$btnType}}">{{ $slot }}</a></li>
