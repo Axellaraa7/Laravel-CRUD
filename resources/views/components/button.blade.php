@@ -1,14 +1,14 @@
-@props(['type'])
+@props(['model'])
 
 @php
-$types = [
+$models = [
     'main' => 'Main',
     'sec' => 'Sec',
     'third' => 'Third',
     'light' => 'Light',
     'dark' => 'Dark',
 ];
-$btnType = $types[$type];
+$btnModel = $models[$model];
 @endphp
 
-<button class="btn btn{{$btnType}}">{{ $slot }}</button>
+<button {{$attributes->merge(['class' => 'btn btn'.$btnModel])}} >{{ $slot }}</button>

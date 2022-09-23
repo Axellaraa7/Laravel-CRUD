@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>@yield('title')</title>
   <link rel="stylesheet" href="{{ asset('css/index.css') }}">
-  <script src="{{ asset('css/index.js') }}"></script>
+  <script src="{{ asset('js/index.js') }}" type="module"></script>
 </head>
 <body>
   @section('body')

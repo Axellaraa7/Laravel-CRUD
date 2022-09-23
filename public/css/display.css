@@ -1,5 +1,10 @@
 .dFlex{ display: flex; }
 .dGrid{ display: grid; }
+.dBlock{ display: block; }
+.dInline{ display: inline; }
+.dInlineBlock{ display: inline-block; }
+.dNone{ display: none; }
+
 
 .flexColumnWrap{ flex-flow: column wrap; }
 .flexColumn{ flex-flow: column nowrap; }

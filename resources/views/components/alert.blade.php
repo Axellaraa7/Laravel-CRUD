@@ -1,14 +1,14 @@
-@props(['type'])
+@props(['model'])
 
 @php
- $types = [
+ $models = [
   'main' => 'Main',
   'sec' => 'Sec',
   'third' => 'Third',
   'light' => 'Light',
   'dark' => 'Dark'
 ];
-  $alert = $types[$type];   
+$alertModel = $models[$model];   
 @endphp
 
-<div class="alert alert{{$alert}}">{{ $slot }}</div>
+<div class="alert alert1 alert{{$alertModel}}">{{ $slot }}</div>

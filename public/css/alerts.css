@@ -5,10 +5,9 @@
   padding: .75rem 1.5rem;
   font-size: 1.5rem;
   font-weight: bold;
-  border-bottom-width: 5px;
-  border-bottom-style: solid;
-  border-radius: 5px;
 }
+.alert1{ border-radius: 5px; border-bottom-style: solid; border-bottom-width: 5px; }
+
 .alertMain{
   color: var(--main);
   border-color: var(--main);

@@ -9,6 +9,8 @@ class Science extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['name','description','url','slug'];
+
     // public function getRouteKeyName()
     // {
     //     return 'slug';

@@ -4,8 +4,11 @@
 @import url('./buttons.css');
 @import url('./alerts.css');
 @import url('./cards.css');
+@import url('./forms.css');
+@import url('./modals.css');
 @import url('./utils.css');
 @import url('./display.css');
 @import url('./breakpoints.css');
 
 @import url('./content.css');
+

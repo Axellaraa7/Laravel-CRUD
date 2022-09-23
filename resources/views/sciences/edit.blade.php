@@ -5,13 +5,8 @@
 @section('page', 'Sciences DB')
 
 @section('main')
-  <section class="container960 dFlex flexRowWrap gap1">
-    <figure>
-      <img src="{{$science->url}}" alt="Science {{$science->name}}">
-    </figure>
-    <div>
-      <h2>{{$science->name}}</h2>
-      <p>{{$science->description}}</p>
-    </div>
-  </section>
+  @include('templates.formTemplate', [
+    'meta' => ['title' => 'Edit '.$science->name, 'route' => 'sciences.update', 'method' => 'put'],
+    'inputs' => [] 
+  ])
 @endsection

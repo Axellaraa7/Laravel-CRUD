@@ -1,0 +1,24 @@
+.modal{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-content: center;
+  background-color: hsla(var(--darkHS),var(--darkL),.5);
+  z-index: 1;
+}
+
+.modal>div{
+  background-color: var(--dark);
+  border-radius: 10px;
+}
+
+.modal-title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 2px solid var(--light);
+}

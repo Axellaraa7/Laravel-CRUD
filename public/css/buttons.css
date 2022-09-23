@@ -10,6 +10,7 @@
   border-bottom-width: 2px;
   border-bottom-style: solid;
   transition: .25s all ease-in 0s;
+  z-index: 1;
 }
 
 .btn::before{

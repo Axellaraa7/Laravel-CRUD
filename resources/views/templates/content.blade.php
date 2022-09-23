@@ -7,8 +7,9 @@
   <header class="dFlex jcBetween">
     <h1 class="letter3h light">@yield('page')</h1>
     <nav class="dFlex aiCenter gap1h">
+        <x-btnLink model="main" link="welcome">Science BD</x-btnLink>
       @foreach ($routes as $index=>$route)
-        <x-btnLink type="main" :link="$controller.$index">{{ $route }}</x-btnLink>
+        <x-btnLink model="main" :link="$controller.$index">{{ $route }}</x-btnLink>
       @endforeach
     </nav>
   </header>

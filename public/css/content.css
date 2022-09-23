@@ -1,10 +1,6 @@
-header{
-  padding: 1rem 2rem;
-}
-main{
-  min-height: 80vh;
-}
-
-.showSection>figure{ flex: 1 1 500px; }
+header{ padding: 1rem 2rem; }
+main{ min-height: 80vh; }
+.showSection>figure{ flex: 1 1 400px; height: 400px; border-radius: 10px; }
 .showSection>article{ flex: 1 1 200px; }
 .showSection>article>div:first-child{ border-bottom: 2px solid var(--third); }
+img{ width: 100%; height: 100%; border-radius: inherit; }

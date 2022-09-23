@@ -1,0 +1,35 @@
+.formElement{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: .4rem;
+}
+
+.label1{
+  text-align: end;
+}
+
+.inputText,.inputArea,.inputDate,.inputTextColumn,.inputAreaColumn,.inputDateColumn{ 
+  padding: .4rem .8rem;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  transition: all .15s ease 0s;
+  resize: none;
+}
+.inputText,.inputArea,.inputDate{
+  width: 250px;
+  flex: 1 1 250px;
+}
+.inputTextColumn,.inputAreaColumn,.inputDateColumn{
+  width: 100%;
+  min-width: 300px;
+  flex: 1 1 auto;
+}
+
+.inputText:focus,.inputArea:focus,.inputDate:focus,.inputTextColumn:focus,.inputAreaColumn:focus,.inputDateColumn:focus{
+  outline: 2px solid var(--fourth);
+  box-shadow:0px 0px 5px 0px var(--sec) inset;
+}

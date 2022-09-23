@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Science;
 use Illuminate\Http\Request;
+use App\Http\Requests\ScienceRequest;
+use Illuminate\Support\Str;
 
 class ScienceController extends Controller
 {
@@ -34,14 +36,11 @@ class ScienceController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ScienceRequest $request)
     {
-      $science = new Science();
-      $science->name = 'Chemistry';
-      $science->description = 'This is a chemistry description';
-      $science->url = 'https://cdn.pixabay.com/photo/2015/04/26/13/47/chemistry-740453_1280.jpg';
-      $science->slug = 'chemistry';
-      $alert = ($science->save()) ? 'Guardado con éxito' : 'Registro no guardado';
+      $alert = (Science::create( 
+        $request->validated() + ['slug' => Str::slug($request->name,'-')] 
+      )) ? 'Guardado con éxito' : 'Registro no guardado';
       return redirect()->route('sciences.index')->with('alert',$alert);
     }
 
@@ -74,12 +73,10 @@ class ScienceController extends Controller
      * @param  \App\Models\Science  $science
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Science $science)
+    public function update(ScienceRequest $request, Science $science)
     {
-      $science->name = 'Chemistry 2';
-      $science->description = 'This is the Chemistry 2 updated description';
-      $alert = ($science->save()) ? 'Actualizado con éxito' : 'Registro no actualizado';
-      return redirect()->route('sciences.index',['alert' => $alert]);
+      $alert = $science->update($request->validated()+['slug' => Str::slug($request->name,'-')]) ? "Science updated" : "Problem with the update";
+      return redirect()->route('sciences.index')->with('alert',$alert);
     }
 
     /**
@@ -91,6 +88,6 @@ class ScienceController extends Controller
     public function destroy(Science $science)
     {
       $alert = ($science->delete()) ? 'Eliminado con éxito' : 'Registro no eliminado';
-      return redirect()->route('sciences.index',['alert' => $alert]);
+      return redirect()->route('sciences.index')->with('alert',$alert);
     }
 }
